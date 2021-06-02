@@ -4,21 +4,23 @@ public class Jogo {
 	public static void main(String[] args) {
 		
 		
-		Heroi j1 = new Heroi();
-		j1.x = 10;
-		j1.y = 20;
+		RangerAzul rangeAzul = new RangerAzul();
+		rangeAzul.x = 10;
+		rangeAzul.y = 21;
 		
-		Monstro j2 = new Monstro();
-		j2.x = 10;
-		j2.y = 21;
+		Monstro monstro = new Monstro();
+		monstro.x = 10;
+		monstro.y = 20;
 		
-		System.out.println(j1.life);
-		System.out.println(j2.life);
+		System.out.println("Vida Heroi->" + rangeAzul.life);
+		System.out.println("Vida Monstro->" + monstro.life);
 		
-		j1.atacar(j2);
-		j1.atacar(j2);
-		System.out.println(j2.life);
-		System.out.println(j1.life);
+		rangeAzul.atacar(monstro);
+		rangeAzul.atacar(monstro);
+		monstro.atacar(rangeAzul);
+		monstro.atacar(rangeAzul);
+		System.out.println(monstro.life);
+		System.out.println(rangeAzul.life);
 	}
 
 }
